@@ -653,6 +653,86 @@ footer {
     color: color-mix(in srgb, var(--ink) 55%, transparent);
 }
 
+/* FORMULÁRIO */
+.lead-form,
+.form-success {
+    max-width: 460px;
+    margin: 48px auto 0;
+    text-align: left;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 32px 28px;
+    scroll-margin-top: 96px;
+}
+
+.lead-form {
+    display: grid;
+    gap: 8px;
+}
+
+.lead-form[hidden],
+.form-success[hidden] {
+    display: none;
+}
+
+.lead-form h3,
+.form-success h3 {
+    font-size: 1.35rem;
+}
+
+.form-sub,
+.form-success p {
+    font-size: .9rem;
+    color: color-mix(in srgb, var(--ink) 70%, transparent);
+    margin-bottom: 8px;
+}
+
+.form-success p {
+    margin-top: 10px;
+}
+
+.lead-form label {
+    font-size: .85rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.lead-form input,
+.lead-form select {
+    width: 100%;
+    padding: 13px 14px;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+}
+
+.lead-form input:focus-visible,
+.lead-form select:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+    border-color: var(--gold);
+}
+
+.form-error {
+    font-size: .88rem;
+    color: #B3261E;
+    margin-top: 6px;
+}
+
+.lead-form .btn {
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.form-note {
+    font-size: .78rem;
+    text-align: center;
+    color: color-mix(in srgb, var(--ink) 55%, transparent);
+}
+
 /* STICKY MOBILE CTA */
 .sticky-cta {
     position: fixed;
