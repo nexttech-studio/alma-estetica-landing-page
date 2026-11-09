@@ -1,37 +1,16 @@
 :root {
-    --ivory: #FAF6EF;
-    --ink: #221F19;
-    --sage: #47573F;
-    --sage-dk: #2E3A29;
-    --gold: #B9863E;
+    --backcolor: #FAF6EF;
+    --backcolor-dk: #EDE1D9;
+    --textcolor: #6D3531;
+    --sage: #c2554d;
+    --sage-dk: #D17E78;
+    --gold: #f08d86;
     --line: rgba(34, 31, 25, .14);
     --card: #FFFFFF;
     font-size: 16px;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --ivory: #1B1913;
-        --ink: #F3EEE4;
-        --sage: #9DB18F;
-        --sage-dk: #7C9370;
-        --gold: #D3A15C;
-        --line: rgba(243, 238, 228, .16);
-        --card: #242018;
-    }
-}
-
-:root[data-theme="dark"] {
-    --ivory: #1B1913;
-    --ink: #F3EEE4;
-    --sage: #9DB18F;
-    --sage-dk: #7C9370;
-    --gold: #D3A15C;
-    --line: rgba(243, 238, 228, .16);
-    --card: #242018;
 }
 
 html {
@@ -45,8 +24,8 @@ html {
 
 body {
     margin: 0;
-    background: var(--ivory);
-    color: var(--ink);
+    background: var(--backcolor);
+    color: var(--textcolor);
     font-family: "Work Sans", -apple-system, Segoe UI, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -117,8 +96,8 @@ svg {
 }
 
 .btn-primary {
-    background: var(--sage-dk);
-    color: var(--ivory);
+    background: var(--sage);
+    color: var(--backcolor);
 }
 
 .btn-primary:hover {
@@ -126,13 +105,13 @@ svg {
 }
 
 .btn-ghost {
-    border-color: var(--ink);
-    color: var(--ink);
+    border-color: var(--textcolor);
+    color: var(--textcolor);
 }
 
 .btn-ghost:hover {
-    background: var(--ink);
-    color: var(--ivory);
+    background: var(--textcolor);
+    color: var(--backcolor);
 }
 
 :focus-visible {
@@ -145,7 +124,7 @@ header {
     position: sticky;
     top: env(safe-area-inset-top, 0px);
     z-index: 50;
-    background: color-mix(in srgb, var(--ivory) 88%, transparent);
+    background: color-mix(in srgb, var(--backcolor-dk) 66%, transparent);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
 }
@@ -158,8 +137,8 @@ nav.wrap {
 }
 
 .logo {
-    font-family: "Fraunces", serif;
-    font-size: 1.35rem;
+    width: 200px;
+    height: auto;
 }
 
 .nav-links {
@@ -188,7 +167,7 @@ nav.wrap {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--ink);
+    color: var(--textcolor);
 }
 
 @media(min-width:860px) {
@@ -232,7 +211,7 @@ nav.wrap {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1fr 1fr;
     gap: 56px;
     align-items: center;
 }
@@ -251,7 +230,7 @@ nav.wrap {
     margin-top: 20px;
     font-size: 1.1rem;
     max-width: 44ch;
-    color: color-mix(in srgb, var(--ink) 78%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 78%, transparent);
 }
 
 .hero-cta {
@@ -264,18 +243,19 @@ nav.wrap {
 .trustline {
     margin-top: 28px;
     font-size: .85rem;
-    color: color-mix(in srgb, var(--ink) 60%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 60%, transparent);
 }
 
-.blob {
+.hero img {
     width: 100%;
-    aspect-ratio: 1/1.05;
+    border-radius: 5px;
 }
 
 /* STATS */
 .stats {
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--backcolor-dk) 66%, transparent);
 }
 
 .stats .wrap {
@@ -294,7 +274,7 @@ nav.wrap {
 .stat-label {
     font-size: .82rem;
     margin-top: 4px;
-    color: color-mix(in srgb, var(--ink) 65%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 65%, transparent);
 }
 
 @media(max-width:600px) {
@@ -320,7 +300,7 @@ nav.wrap {
 }
 
 .dores-item {
-    background: var(--ivory);
+    background: var(--backcolor);
     padding: 24px 28px;
     display: flex;
     gap: 16px;
@@ -367,7 +347,7 @@ nav.wrap {
 .proc-card p {
     margin-top: 10px;
     font-size: .92rem;
-    color: color-mix(in srgb, var(--ink) 70%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 70%, transparent);
 }
 
 .proc-num {
@@ -514,44 +494,44 @@ nav.wrap {
 .diff-row p {
     font-size: .88rem;
     margin-top: 6px;
-    color: color-mix(in srgb, var(--ink) 68%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 68%, transparent);
 }
 
 /* OFERTA */
 .offer {
-    background: var(--sage-dk);
-    color: var(--ivory);
+    background: var(--textcolor);
+    color: var(--backcolor-dk);
     text-align: center;
     padding: 72px 24px;
     border-radius: 2px;
 }
 
 .offer h2 {
-    color: var(--ivory);
+    color: var(--backcolor);
     font-size: clamp(1.8rem, 3.4vw, 2.5rem);
 }
 
 .offer p {
     margin-top: 14px;
-    color: color-mix(in srgb, var(--ivory) 82%, transparent);
+    color: color-mix(in srgb, var(--backcolor) 82%, transparent);
     max-width: 52ch;
     margin-inline: auto;
 }
 
 .offer .btn-primary {
     background: var(--gold);
-    color: var(--ink);
+    color: var(--textcolor);
     margin-top: 28px;
 }
 
 .offer .btn-primary:hover {
-    background: var(--ivory);
+    background: var(--backcolor);
 }
 
 .offer-note {
     margin-top: 14px;
     font-size: .78rem;
-    color: color-mix(in srgb, var(--ivory) 65%, transparent);
+    color: color-mix(in srgb, var(--backcolor) 65%, transparent);
 }
 
 /* FAQ */
@@ -589,7 +569,7 @@ details[open] summary::after {
 details p {
     margin-top: 14px;
     font-size: .92rem;
-    color: color-mix(in srgb, var(--ink) 70%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 70%, transparent);
     max-width: 64ch;
 }
 
@@ -612,6 +592,7 @@ details p {
 footer {
     border-top: 1px solid var(--line);
     padding: 48px 0 calc(48px + env(safe-area-inset-bottom, 0px));
+    background: color-mix(in srgb, var(--backcolor-dk) 66%, transparent);
 }
 
 .foot-grid {
@@ -628,17 +609,15 @@ footer {
     }
 }
 
-.foot-grid h4 {
-    font-family: "Fraunces", serif;
-    font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 12px;
+.foot-grid img {
+    width: 230px;
+    height: auto;
 }
 
 .foot-grid a {
     display: block;
     margin-bottom: 8px;
-    color: color-mix(in srgb, var(--ink) 72%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 72%, transparent);
 }
 
 .foot-grid a:hover {
@@ -650,7 +629,7 @@ footer {
     padding-top: 20px;
     border-top: 1px solid var(--line);
     font-size: .78rem;
-    color: color-mix(in srgb, var(--ink) 55%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 55%, transparent);
 }
 
 /* FORMULÁRIO */
@@ -683,7 +662,7 @@ footer {
 .form-sub,
 .form-success p {
     font-size: .9rem;
-    color: color-mix(in srgb, var(--ink) 70%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 70%, transparent);
     margin-bottom: 8px;
 }
 
@@ -703,8 +682,8 @@ footer {
     padding: 13px 14px;
     font: inherit;
     font-size: 1rem;
-    color: var(--ink);
-    background: var(--ivory);
+    color: var(--textcolor);
+    background: var(--backcolor);
     border: 1px solid var(--line);
     border-radius: 2px;
 }
@@ -730,7 +709,7 @@ footer {
 .form-note {
     font-size: .78rem;
     text-align: center;
-    color: color-mix(in srgb, var(--ink) 55%, transparent);
+    color: color-mix(in srgb, var(--textcolor) 55%, transparent);
 }
 
 /* STICKY MOBILE CTA */
@@ -740,7 +719,7 @@ footer {
     right: 0;
     bottom: 0;
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
-    background: var(--ivory);
+    background: var(--backcolor);
     border-top: 1px solid var(--line);
     z-index: 60;
 }
